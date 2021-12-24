@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Jadian Yuk !by Aiman </title>
+  </head>
+  <body>
+    <div class="card bg-love">
+    	<!-- tambahkan foto kalian disini ,bisa juga berformat file seperti foto.jpg ,
+ jika masih tidak paham chat wa.me/6282387804410-->
+      <img id="thumb" src="https://telegra.ph/file/ef3abd143382e324a260d.jpg" alt="thumb" class="img-thumb" />
+      <h1 class="latin text-center">Hai Kamu</h1>
+      <h2 class="text-center">Kamu mau gak jadi pacar aku ?</h2>
+      <div class="card-footer">
+        <div class="btn mau" onclick="mau()">Mau 😍</div>
+        <div class="btn gak" onclick="gakmau(this)" onmouseover="gakmau(this)">
+          Gak ☹️
+        </div>
+      </div>
+      <div class="info text-center mt-16" id="info"></div>
+      <div class="water-mark text-center">
+      <a style="text-decoration: none" href="https://wa.me/60102810046">&#169; Aiman</a><!-- Masukan nomor sama namamu coeg-->
+      </div>
+    </div>
+    <div class="text-center mt-16" id="musicbox">
+    	<!-- tambahkan musik kalian -->
+      <audio id="music" src=""></audio>
+    </div>
+    
+  </body>
+  <script>
+    var _info = document.getElementById("info");
+    var _music = document.getElementById("music");
+    
+    function gakmau(element) {
+      element.style.position = "absolute"; //biar gak keluar dari box atau berpindah ke tempat terdekat
+      element.style.left = `${Math.floor(Math.random() * 90)}%`;
+      element.style.top = `${Math.floor(Math.random() * 90)}%`; //jangan diubah ye
+      _info.innerHTML = "Harus Mau 😔";
+    }
+    function mau() {
+    _music.src = `diterima.mp3`;
+      if (_music.paused) _music.play(); //kalo dia mau otomatis keputar lagunya 
+      _info.innerHTML = "Makasih Sayang 😍. Lagu ini buat kamu.";
+    }
+  </script>
+</html>
